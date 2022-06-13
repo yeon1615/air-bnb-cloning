@@ -24,7 +24,7 @@ header {
 }
 
 .header__column {
-  width: 30vw;
+  width: 30%;
 }
 
 .header__left {
@@ -33,10 +33,10 @@ header {
 }
 
 .header__search-bar {
-  width: 355px;
+  width: 360px;
   height: 45px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
@@ -52,6 +52,10 @@ header {
 .header__search-bar .search-bar__when span {
   font-weight: 700;
   font-size: 14px;
+}
+
+.header__search-bar .search-bar__add-guests {
+  padding: 0;
 }
 
 .header__search-bar .search-bar__add-guests span {
@@ -90,22 +94,7 @@ header {
   align-items: center;
 }
 
-.user-menu__column-left {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.user-menu__column-left .user-menu__global-btn {
-  font-size: 15px;
-  margin: 0 7px;
-  display: flex;
-  align-items: center;
-}
-
-.user-menu__column-left .user-menu__hosting {
+.user-menu__hosting {
   width: 100px;
   height: 40px;
   display: flex;
@@ -117,13 +106,15 @@ header {
   align-items: center;
 }
 
-.user-menu__column-right {
-  width: 20%;
+
+.user-menu__global-btn {
+  font-size: 15px;
+  margin: 0 15px 0 7px;
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  align-items: center;
 }
-.user-menu__column-right .user-menu__setting-btn {
+
+.user-menu__setting-btn {
   width: 75px;
   height: 42px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -132,25 +123,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-left: 15px;
-  position: relative;
-  position: absolute;
-  top: -22px;
-  right: 0;
 }
 
 .user-menu__setting-btn i:first-child {
   font-size: 15px;
-  position: absolute;
-  top: 13px;
-  left: 14px;
 }
 
 .user-menu__setting-btn i:last-child {
   font-size: 28px;
   color: #717171;
-  position: absolute;
-  top: 6px;
-  right: 7px;
 }
 
 
