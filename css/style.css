@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 @import 'reset.css';
 @import 'variables.css';
+@import 'components/header.css';
+@import 'components/menu.css';
+@import 'components/footer.css';
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
@@ -24,193 +27,9 @@ header {
   z-index: 10;
 }
 
-.header__column {
-  width: 30%;
-}
-
-.header__left {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.header__search-bar {
-  width: 360px;
-  height: 45px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50px;
-  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.2);
-}
-
-.header__search-bar .search-bar__where span {
-  margin-left: 15px;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.header__search-bar .search-bar__when span {
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.header__search-bar .search-bar__add-guests {
-  padding: 0;
-}
-
-.header__search-bar .search-bar__add-guests span {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.header__search-bar .search-bar__add-guests div {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: white;
-  background-color: var(--brand-color);
-  border-radius: 50%;
-  margin-left: 10px;
-}
-
-.search-bar__add-guests {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__search-bar .divider {
-  width: 1px;
-  height: 25px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.header__user-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.user-menu__hosting {
-  width: 100px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-}
 
 
-.user-menu__global-btn {
-  font-size: 15px;
-  margin: 0 15px 0 7px;
-  display: flex;
-  align-items: center;
-}
 
-.user-menu__setting-btn {
-  width: 75px;
-  height: 42px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 15px;
-}
-
-.user-menu__setting-btn i:first-child {
-  font-size: 15px;
-}
-
-.user-menu__setting-btn i:last-child {
-  font-size: 28px;
-  color: #717171;
-}
-
-
-.user-menu__setting-btn {
-  display: flex;
-}
-
-.menu {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 80px;
-  box-sizing: border-box;
-  position: sticky;
-  top: 65px;
-  background-color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  z-index: 4;
-}
-
-.menu__list {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.menu__items {
-  width: 80px;
-  height: 65px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--gray);
-  font-weight: 700;
-}
-
-.menu__items img {
-  height: 25px;
-  width: 25px;
-  opacity: 0.7;
-}
-
-.menu__items span {
-  font-size: 12px;
-}
-
-.menu__btn {
-  width: 28px;
-  height: 28px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.menu__filter {
-  width: 82px;
-  height: 48px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 700;
-  margin-top: 20px;
-}
-
-
-/*무한스크롤은 js로 구현하는 것...임시로*/
 .main-screen {
   height: 200vh;
   width: 100vw;
@@ -237,7 +56,8 @@ header {
 .main-items__photo {
   width: 320px;
   height: 305px;
-  overflow:hidden
+  overflow:hidden;
+  position: relative;
 }
 
 .main-items__photo img {
@@ -245,6 +65,17 @@ header {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  position: relative;
+}
+
+.main-items__heart {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  color: whitesmoke;
 }
 
 .showing-map {
@@ -265,69 +96,7 @@ header {
   transform: translate(-50%,0);
 }
 
-footer {
-  height: 90px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0 80px;
-  box-sizing: border-box;
-}
-footer a {
-  text-decoration: none;
-  color: inherit;
-}
-footer a:hover {
-  text-decoration-line: underline;
-}
 
-
-.footer-row {
-  height: 50%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 15px;
-}
-
-.footer-row:first-child {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  word-spacing: 2px;
-}
-
-.footer-top__left-column{
-  width: 50%;
-font-weight: 300;
-}
-
-.footer-top__right-column{
-  font-weight: 500;
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-
-.footer-row:last-child {
-  font-size: 11px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  line-height: 1.1;
-}
-
-.header__logo {
-  width: 118px;
-  height: 64px;
-}
 
 
 /*html 구조부터 탄탄히 짜지 않으면 css 단계에서 다 뜯어고치는 수가.. 
