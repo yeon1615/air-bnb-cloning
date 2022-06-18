@@ -30,6 +30,11 @@
   align-items: center;
   color: var(--gray);
   font-weight: 700;
+  transition: color 0.2s ease-in;
+}
+
+.menu__items:hover {
+  color: black;
 }
 
 .menu__items img {

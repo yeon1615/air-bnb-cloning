@@ -16,6 +16,11 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease-in;
+}
+
+.header__search-bar:hover {
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.4);
 }
 
 .header__search-bar .search-bar__where span {
@@ -70,22 +75,27 @@
 }
 
 .user-menu__hosting {
-  width: 100px;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 15px;
   font-weight: 500;
-  display: flex;
-  align-items: center;
+  padding: 13px;
+  border-radius: 30px;
 }
 
 .user-menu__global-btn {
   font-size: 15px;
-  margin: 0 15px 0 7px;
+  padding: 13px;
+  margin: 0 10px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
+}
+
+.user-menu__hosting:hover,
+.user-menu__global-btn:hover {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .user-menu__setting-btn {
@@ -97,6 +107,11 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 15px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.user-menu__setting-btn:hover {
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.2);
 }
 
 .user-menu__setting-btn i:first-child {

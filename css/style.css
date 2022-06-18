@@ -12,6 +12,10 @@ body {
   overflow-x: hidden
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   height: 80px;
   width: 100%;
@@ -78,6 +82,13 @@ header {
   color: whitesmoke;
 }
 
+.main-items__info {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
 .showing-map {
   width: 150px;
   height:50px;
@@ -94,8 +105,12 @@ header {
   top: 79%;
   left: 50%;
   transform: translate(-50%,0);
+  transition: all 0.1s ease-in-out;
 }
-
+.showing-map:hover {
+  transform: scale(1.05) translateX(-47%);
+  box-shadow: 0 7px 6px -3px rgba(0, 0, 0, 0.3);
+}
 
 
 
